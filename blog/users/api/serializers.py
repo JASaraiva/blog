@@ -1,9 +1,9 @@
 from rest_framework.serializers import ModelSerializer
-from artigos.models import Artigo
+from users.models import User
 
-class ArtigoSerializer(ModelSerializer):
+class UserSerialize(ModelSerializer):
     class Meta:
-        model = Artigo
-        fields = ['id', 'title', 'content', 'author', 'created', 'modificated']
+        model = User
+        fields = ['id', 'name', 'last_name', 'user', 'password', 'cellphone', 'email', 'role', 'status']
         
         

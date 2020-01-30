@@ -4,6 +4,6 @@ from artigos.models import Artigo
 class ArtigoSerializer(ModelSerializer):
     class Meta:
         model = Artigo
-        fields = ['id', 'title', 'content', 'author', 'created', 'modificated']
-        
+        fields = ['id', 'title', 'content', 'author', 'comments', 'images', 'created', 'modified', 'status']
+
         
