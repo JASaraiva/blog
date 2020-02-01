@@ -15,7 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from rest_framework import routers
+from core.api.viewsets import CoreViewSet
+from users.api.viewsets import UsersViewSet
+from artigos.api.viewsets import ArtigosViewSet
+from rest_framework.authtoken import views
+
+router = routers.DefaultRouter()
+router.register(r'core', CoreViewSet, basename='Blog')
+router.register(r'artigos', ArtigosViewSet)
+router.register(r'users', UsersViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include(router.urls)),
+    path('api-token-auth/', views.obtain_auth_token),
 ]

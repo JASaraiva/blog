@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'users',
     'artigos',
     'photos',
-    'comments',
-
+    'comments'
 ]
 
 MIDDLEWARE = [
