@@ -22,6 +22,7 @@ from articles.api.viewsets import ArticlesViewSet
 from comments.api.viewsets import CommentsViewSet
 from photos.api.viewsets import PhotosViewSet
 from rest_framework.authtoken import views
+from users.api.viewsets import UsersViewSet
 
 
 router = routers.DefaultRouter()
@@ -29,6 +30,7 @@ router.register(r'blog', CoreViewSet, basename='Blog')
 router.register(r'articles', ArticlesViewSet)
 router.register(r'comments', CommentsViewSet)
 router.register(r'photos', PhotosViewSet)
+router.register(r'users', UsersViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

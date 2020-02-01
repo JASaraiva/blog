@@ -1,4 +1,4 @@
-- Criar viewset users
+- personalizar campos user
 - Testar relacionamentos
 - Testar exibição todas as informações
 - Implementar autenticação
