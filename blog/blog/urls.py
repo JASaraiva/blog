@@ -18,13 +18,17 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from core.api.viewsets import CoreViewSet
-from artigos.api.viewsets import ArtigosViewSet
+from articles.api.viewsets import ArticlesViewSet
+from comments.api.viewsets import CommentsViewSet
+from photos.api.viewsets import PhotosViewSet
 from rest_framework.authtoken import views
 
 
 router = routers.DefaultRouter()
-router.register(r'core', CoreViewSet, basename='Blog')
-router.register(r'artigos', ArtigosViewSet)
+router.register(r'blog', CoreViewSet, basename='Blog')
+router.register(r'articles', ArticlesViewSet)
+router.register(r'comments', CommentsViewSet)
+router.register(r'photos', PhotosViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

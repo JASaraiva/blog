@@ -1,0 +1,5 @@
+- Criar viewset users
+- Testar relacionamentos
+- Testar exibição todas as informações
+- Implementar autenticação
+- Front-end

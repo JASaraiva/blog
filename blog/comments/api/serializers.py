@@ -1,9 +1,9 @@
 from rest_framework.serializers import ModelSerializer
-from artigos.models import Artigo
+from comments.models import Comment
 
-class ArtigoSerializer(ModelSerializer):
+class CommentsSerializer(ModelSerializer):
     class Meta:
-        model = Artigo
-        fields = ['id', 'title', 'content', 'author', 'created', 'modificated']
+        model = Comment
+        fields = ['id', 'comment', 'author', 'created']
         
         

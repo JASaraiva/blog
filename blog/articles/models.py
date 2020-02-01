@@ -3,7 +3,7 @@ from photos.models import Photo
 from comments.models import Comment
 from django.contrib.auth.models import User
 
-class Artigo(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=User)
@@ -11,7 +11,7 @@ class Artigo(models.Model):
     images = models.ManyToManyField(Photo)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now_add=True)
-    Status = models.BooleanField(default=True)
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
