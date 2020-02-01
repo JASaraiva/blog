@@ -1,7 +1,7 @@
 from django.db import models
 from photos.models import Photo
-from users.models import User
 from comments.models import Comment
+from django.contrib.auth.models import User
 
 class Artigo(models.Model):
     title = models.CharField(max_length=200)
